@@ -1,0 +1,7 @@
+{
+  "todos": [
+    { "id": 1, "text": "Text 1", "checked": true },
+    { "id": 4, "text": "Text 2", "checked": false },
+    { "id": 3, "text": "Text 3", "checked": true }
+  ]
+}

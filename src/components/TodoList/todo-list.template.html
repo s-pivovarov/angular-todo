@@ -1,0 +1,9 @@
+<ul>
+    <todo-item ng-repeat="todo in $ctrl.getTodo($ctrl.todos, $ctrl.active_filter)"
+               id="todo.id"
+               text="todo.text"
+               checked="todo.checked"
+               on-change="$ctrl.onChangeTodo(id)"
+    ></todo-item>
+</ul>
+<todo-footer on-edit-filter="$ctrl.setFilter(filter)" filters="$ctrl.filters" count="$ctrl.todos.length"></todo-footer>

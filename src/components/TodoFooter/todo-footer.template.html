@@ -1,0 +1,6 @@
+<p>All: {{$ctrl.count}} | Complited: {{$ctrl.count}} | Active: {{$ctrl.count}}</p>
+<div>
+    <button ng-click="$ctrl.onSetFilter($ctrl.filters.all)">all</button>
+    <button ng-click="$ctrl.onSetFilter($ctrl.filters.active)">active</button>
+    <button ng-click="$ctrl.onSetFilter($ctrl.filters.completed)">completed</button>
+</div>
