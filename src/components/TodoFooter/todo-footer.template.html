@@ -1,6 +1,6 @@
-<p>All: {{$ctrl.count}} | Complited: {{$ctrl.count}} | Active: {{$ctrl.count}}</p>
-<div>
-    <button ng-click="$ctrl.onSetFilter($ctrl.filters.all)">all</button>
-    <button ng-click="$ctrl.onSetFilter($ctrl.filters.active)">active</button>
-    <button ng-click="$ctrl.onSetFilter($ctrl.filters.completed)">completed</button>
+<p>All: {{$ctrl.count.all}} | Complited: {{$ctrl.count.completed}} | Active: {{$ctrl.count.active}}</p>
+<div class="todo-footer__btn-group">
+    <button class="todo-footer__btn" ng-class="$ctrl.setClassFilter($ctrl.filters.all)" ng-click="$ctrl.onSetFilter($ctrl.filters.all)">All</button>
+    <button class="todo-footer__btn" ng-class="$ctrl.setClassFilter($ctrl.filters.active)" ng-click="$ctrl.onSetFilter($ctrl.filters.active)">Active</button>
+    <button class="todo-footer__btn" ng-class="$ctrl.setClassFilter($ctrl.filters.completed)" ng-click="$ctrl.onSetFilter($ctrl.filters.completed)">Completed</button>
 </div>

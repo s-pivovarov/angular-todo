@@ -6,12 +6,17 @@ angular.module('todoItem')
 
             this.changeTodoStatus = function (id) {
                 ctrl.onChange({id: id});
+            };
+
+            this.removeTodo = function () {
+                ctrl.onRemove({id: ctrl.id});
             }
         },
         bindings: {
             id: '<',
             text: '=',
             checked: '=',
-            onChange: '&'
+            onChange: '&',
+            onRemove: '&'
         }
     });

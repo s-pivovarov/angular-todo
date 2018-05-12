@@ -4,8 +4,21 @@ angular.module('todoFooter')
         controller: function TodoFooterController() {
             var ctrl = this;
 
+            this.$onInit = function () {
+                ctrl.filter = ctrl.filters.all;
+            };
+
             this.onSetFilter = function (filter) {
+                ctrl.filter = filter;
                 ctrl.onEditFilter({ filter: filter });
+            };
+
+            this.setClassFilter = function (filter) {
+                if(ctrl.filter === filter) {
+                    return 'todo-footer__btn_active';
+                }
+
+                return '';
             }
         },
         bindings: {

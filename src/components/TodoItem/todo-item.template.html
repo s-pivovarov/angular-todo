@@ -1,3 +1,8 @@
-<li>
-    <label><input type="checkbox" ng-click="$ctrl.changeTodoStatus($ctrl.id)" ng-checked="$ctrl.checked"></label> {{$ctrl.text}}
+<li class="list-item">
+    <label class="list-item__checkbox-container">
+        <input class="list-item__checkbox" type="checkbox" ng-click="$ctrl.changeTodoStatus($ctrl.id)" ng-checked="$ctrl.checked">
+        <span class="list-item__checkbox-view"></span>
+    </label>
+        {{$ctrl.text}}
+    <button class="list-item__btn" ng-click="$ctrl.removeTodo()">X</button>
 </li>

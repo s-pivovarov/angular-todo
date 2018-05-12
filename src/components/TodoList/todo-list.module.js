@@ -1,1 +1,1 @@
-angular.module('todoList', ['todoItem', 'todoFooter']);
+angular.module('todoList', ['todoItem', 'todoFooter', 'todoAdd']);

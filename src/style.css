@@ -1,0 +1,108 @@
+body {
+    background: #f6f6f6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.todo {
+    width: 460px;
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0;
+}
+
+.todo-list {
+    padding: 0;
+}
+
+.todo-list li {
+    list-style-type: none;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    font-size: 14pt;
+    cursor: default;
+    padding: 4px 8px;
+    margin: 0;
+    background: white;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.list-item__checkbox-container {
+    margin-right: 16px;
+}
+
+.list-item__checkbox-container .list-item__checkbox {
+    display: none;
+}
+
+.list-item__checkbox-view::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+
+.list-item__checkbox:checked + .list-item__checkbox-view::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+
+.list-item__btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    padding: 3px;
+    font-size: 14pt;
+    opacity: 0;
+    color: #ff694b;
+    cursor: pointer;
+}
+
+.list-item:hover .list-item__btn {
+    opacity: 0.6;
+}
+
+.list-item__btn:hover {
+    opacity: 1 !important;
+}
+
+.add-todo__input {
+    width: 100%;
+    margin: 0;
+    padding: 8px 12pt 8px 52px;
+    font-size: 14pt;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.add-todo__input::placeholder {
+    color: #ebebeb;
+}
+
+.add-todo__btn {
+    display: none;
+}
+
+.todo-footer__btn-group {
+    display: flex;
+}
+
+.todo-footer__btn {
+    width: 100%;
+    padding: 6px;
+    font-size: 14pt;
+    border: none;
+    background: #f4f4f4;
+}
+
+.todo-footer__btn:hover {
+    opacity: 0.7;
+}
+
+.todo-footer__btn_active {
+    background: #1b9aff;
+}

@@ -1,11 +1,17 @@
 function AppController($scope, $http) {
-    var cntr = this;
+    $scope.todos = [];
+    $scope.loader = true;
 
     $http.get('src/data/todos.json')
         .then(function (res) {
-            cntr.todos = res.data.todos;
+            $scope.todos = res.data.todos;
+            $scope.loader = false;
         });
 }
 
-angular.module('my-app', ['todoList'])
-    .controller('AppCtrl', AppController);
+var App = angular.module('my-app', ['todoList'])
+    .controller('AppCtrl', ['$scope', '$http', AppController]);
+
+// App.config(['$compileProvider', function ($compileProvider) {
+//     $compileProvider.debugInfoEnabled(false);
+// }]);
