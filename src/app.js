@@ -12,6 +12,6 @@ function AppController($scope, $http) {
 var App = angular.module('my-app', ['todoList'])
     .controller('AppCtrl', ['$scope', '$http', AppController]);
 
-// App.config(['$compileProvider', function ($compileProvider) {
-//     $compileProvider.debugInfoEnabled(false);
-// }]);
+App.config(['$compileProvider', function ($compileProvider) {
+    $compileProvider.debugInfoEnabled(false);
+}]);
